@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FS Joey-Bold.otf">
+            <string>FSJoey-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EULAWebController">
+            <connections>
+                <outlet property="activityView" destination="gmM-r0-EX5" id="hf2-I8-ZNr"/>
+                <outlet property="titleLabel" destination="xPy-b5-YuB" id="jVn-fh-Sci"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="cdD-x2-K8k" id="8TN-sN-iz2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jax-Eu-bwC">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FORGOT PASSWORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPy-b5-YuB">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="1eT-4o-veX"/>
+                                <constraint firstAttribute="width" constant="200" id="pol-zh-rSj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FSJoey-Bold" family="FS Joey" pointSize="14"/>
+                            <color key="textColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHI-dd-4hW">
+                            <frame key="frameInset" minX="5" minY="3" width="40" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="icon-Back"/>
+                            <connections>
+                                <action selector="acceptButtonAction:" destination="-1" eventType="touchUpInside" id="i80-fK-G1P"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xPy-b5-YuB" firstAttribute="centerX" secondItem="jax-Eu-bwC" secondAttribute="centerX" id="dzD-TF-l6T"/>
+                        <constraint firstAttribute="height" constant="40" id="jwl-Wf-MrU"/>
+                        <constraint firstItem="xPy-b5-YuB" firstAttribute="top" secondItem="jax-Eu-bwC" secondAttribute="top" constant="11" id="tRk-SC-ELf"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdD-x2-K8k">
+                    <frame key="frameInset" minY="62" width="600" height="538"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="dyl-5b-YFJ"/>
+                    </connections>
+                </webView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gmM-r0-EX5">
+                    <frame key="frameInset" minX="290" minY="312" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cdD-x2-K8k" secondAttribute="trailing" id="2I8-P5-4M7"/>
+                <constraint firstAttribute="centerX" secondItem="cdD-x2-K8k" secondAttribute="centerX" id="4C4-e7-kgK"/>
+                <constraint firstItem="gmM-r0-EX5" firstAttribute="centerX" secondItem="cdD-x2-K8k" secondAttribute="centerX" id="GbL-GL-kkS"/>
+                <constraint firstAttribute="trailing" secondItem="jax-Eu-bwC" secondAttribute="trailing" id="NJF-jk-7yG"/>
+                <constraint firstItem="cdD-x2-K8k" firstAttribute="top" secondItem="jax-Eu-bwC" secondAttribute="bottom" constant="2" id="SRT-Cb-Q30"/>
+                <constraint firstItem="gmM-r0-EX5" firstAttribute="centerY" secondItem="cdD-x2-K8k" secondAttribute="centerY" constant="-9" id="TPX-Nf-c4H"/>
+                <constraint firstItem="cdD-x2-K8k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="62" id="W3D-UR-0n8"/>
+                <constraint firstAttribute="bottom" secondItem="cdD-x2-K8k" secondAttribute="bottom" id="Yt7-wP-d8r"/>
+                <constraint firstAttribute="centerY" secondItem="cdD-x2-K8k" secondAttribute="centerY" constant="-31" id="dw4-jW-YeH"/>
+                <constraint firstItem="jax-Eu-bwC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g45-Nm-HdY"/>
+                <constraint firstItem="cdD-x2-K8k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="scb-V9-chI"/>
+            </constraints>
+            <point key="canvasLocation" x="289" y="314"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-Back" width="11" height="17"/>
+    </resources>
+</document>
